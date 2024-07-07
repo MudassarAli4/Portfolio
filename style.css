@@ -1,0 +1,591 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --text-color: #fff;
+    /* --hover-color: #10eaf1; */
+    --hover-color: #32ff7e;
+    --bg-color: #2c3035;
+    --second-bg-color: #161515;
+    --big-font: 2.5rem;
+    --normal-font: 2rem;
+    /* --neon-box-shadow: 0 0 0.5rem #12f7ff;
+    --font-neon-text-shadow: 0 0 10px rgba(18, 247, 255, 0.3),
+        0 0 20px rgba(18, 247, 255, 0.3),
+        0 0 30px rgba(18, 247, 255, 0.3),
+        0 0 40px rgba(18, 247, 255, 0.3),
+        0 0 70px rgba(18, 247, 255, 0.3),
+        0 0 80px rgba(18, 247, 255, 0.3),
+        0 0 100px rgba(18, 247, 255, 0.3),
+        0 0 150px rgba(18, 247, 255, 0.3); */
+    --neon-box-shadow: 0 0 0.5rem #39ff14;
+    --font-neon-text-shadow:
+        0 0 10px rgba(57, 255, 20, 0.3),
+        0 0 20px rgba(57, 255, 20, 0.3),
+        0 0 30px rgba(57, 255, 20, 0.3),
+        0 0 40px rgba(57, 255, 20, 0.3),
+        0 0 70px rgba(57, 255, 20, 0.3),
+        0 0 80px rgba(57, 255, 20, 0.3),
+        0 0 100px rgba(57, 255, 20, 0.3),
+        0 0 150px rgba(57, 255, 20, 0.3);
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* ---      LOGO        --- */
+
+.logo{
+    font-size: 1.4rem;
+}
+
+span{
+    color: var(--hover-color);
+}
+
+/* ---      NavBar Menu List     --- */
+
+a{
+    color: var(--text-color);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background: var(--second-bg-color);
+    padding: 0 5%;
+    box-shadow: var(--neon-box-shadow);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav ul li{
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover{
+    color: var(--hover-color);
+}
+
+/* ---      Menu Icon       --- */
+
+.menu-icon{
+    display: none;
+}
+
+.bx-menu{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ---      Main Section        --- */
+
+.main-section{
+    padding: 100px 5% 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-section .left-section h1{
+    font-size: 2.5rem;
+}
+
+.main-section .left-section h2{
+    font-size: 1.5rem;
+    padding: 12px 0;
+}
+
+.main-section .left-section p{
+    font-size: 1.1rem;
+    text-wrap: balance;
+}
+
+.btn-box{
+    margin-block: 25px;
+}
+
+.btn{
+    padding: 12px 30px;
+    background: var(--hover-color);
+    box-shadow: var(--neon-box-shadow);
+    border-radius: 5px;
+    border: 3px solid var(--hover-color);
+    color: var(--bg-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.btn a{
+
+    color: var(--bg-color);
+}
+
+.btn:hover {
+    background: var(--bg-color);
+    color: var(--hover-color);
+}
+
+.btn a:hover {
+    color: var(--hover-color);
+}
+
+.social-icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons i{
+    padding: 0.6rem;
+    background: var(--hover-color);
+    border: 3px solid var(--hover-color);
+    color: var(--bg-color);
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5 ease-in-out;
+}
+
+.social-icons i:hover{
+    background: var(--second-bg-color);
+    color: var(--hover-color);
+}
+
+.main-section .right-section{
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section .right-section img{
+    width: 80%;
+    margin: 10px 0;
+}
+
+/* -- --- about-section --- -- */
+
+.about-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--second-bg-color);
+    min-height: 50vh;
+    height: 100%;
+    text-align: center;
+    padding: 80px 8%;
+    gap: 1rem;
+}
+
+.about-section h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.about-section h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.about-section p{
+    color: #bcbcbc;
+    text-wrap: balance;
+}
+
+/* ---      Skill Section        --- */
+
+.skill-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+}
+
+.skill-section .left-section{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.skill-section .left-section img{
+    width: 80px;
+}
+
+.skill-section .right-section {
+    width: 50%;
+}
+
+.skill-section .right-section .progress-container {
+    width: 100%;
+}
+
+.skill-name-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2px;
+    padding-top: 25px;
+}
+
+.line-background {
+    background: var(--second-bg-color);
+    height: 13px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.line-background .line {
+    height: 13px;
+    border-radius: 25px;
+    background: var(--hover-color);
+    box-shadow: var(--neon-box-shadow);
+}
+
+.line-background .html {
+    width: 75%;
+    animation: html 2s linear;
+}
+
+.line-background .css {
+    width: 65%;
+    animation: css 2s linear;
+}
+
+.line-background .javascript {
+    width: 72%;
+    animation: javascript 2s linear;
+
+}
+
+.line-background .react {
+    width: 60%;
+    animation: react 2s linear;
+
+}
+
+.line-background .nodejs {
+    width: 30%;
+    animation: nodejs 2s linear;
+}
+
+.line-background .net {
+    width: 55%;
+    animation: net 2s linear;
+}
+
+@keyframes html {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 75%;
+    }
+}
+
+@keyframes css {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 65%;
+    }
+}
+
+@keyframes javascript {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 72%;
+    }
+}
+
+@keyframes react {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes nodejs {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 30%;
+    }
+}
+
+@keyframes net {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 55%;
+    }
+}
+
+
+/*---    portfolio section  --- */
+
+.portfolio-section {
+    background: var(--second-bg-color);
+    padding: 80px 8%;
+    padding-top: 100px;
+}
+
+.portfolio-section h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-block: 30px;
+}
+
+.card {
+    width: 250px;
+    height: 300px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .layer {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.3), #39ff14);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover .layer {
+    opacity: 1;
+}
+
+.card .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    text-align: center;
+}
+
+.card .icon a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    background: white;
+    color: var(--bg-color);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.card i:hover {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.card:hover .icon {
+    opacity: 1;
+}
+
+.card .icon span {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+
+/*  ---      contact-section        --- */
+
+.contact-section {
+    padding: 80px 8%;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    background: var(--second-bg-color);
+    border-radius: 12px;
+    color: #fff;
+    border: 2px solid var(--hover-color);
+}
+
+form textarea {
+    height: 150px;
+}
+
+/*  ---      footer     --- */
+
+footer {
+    background: var(--second-bg-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 13px;
+}
+
+/* ---       back to top btn        --- */
+
+.bx-chevron-up {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--hover-color);
+    color: var(--second-bg-color);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.bx-chevron-up:hover {
+    box-shadow: var(--font-neon-text-shadow);
+}
+
+
+/* ---      Media Queries       --- */
+
+@media (max-width: 820px) {
+    nav{
+        padding-inline: 4%;
+    }
+
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background-color: var(--bg-color);
+        max-height: 0;
+        overflow: hidden;
+        z-index: 1000;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    nav ul li:first-child{
+        padding-top: 10px;
+    }
+
+    nav ul li:last-child{
+        padding-bottom: 10px;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    .main-section{
+        flex-direction: column-reverse;
+    }
+
+    .main-section .left-section, .main-section .right-section{
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px){
+    .skill-section{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .skill-section .left-section, .skill-section .right-section{
+        width: 100%;
+    }
+}
